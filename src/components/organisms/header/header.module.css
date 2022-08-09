@@ -1,0 +1,15 @@
+.header__root {
+  @apply flex bg-indigo-700 justify-around items-center drop-shadow-xl;
+}
+
+.header__root > a {
+  @apply font-mono  font-bold text-white text-xl hover:cursor-pointer hover:text-indigo-300;
+}
+
+.header__root > nav {
+  @apply flex items-center;
+}
+
+.header__root > nav > a {
+  @apply text-white font-medium px-2 uppercase no-underline p-4 border-b-2 border-solid border-transparent hover:border-b-2 hover:border-solid hover:border-cyan-400;
+}
