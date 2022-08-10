@@ -12,6 +12,6 @@ describe("Footer test", () => {
     const currentYear = new Date().getFullYear().toString();
     const { getByText } = render(<Footer />);
 
-    expect(getByText(/2022/i)).toHaveTextContent(currentYear);
+    expect(getByText(/copyright/i)).toHaveTextContent(currentYear);
   });
 });
