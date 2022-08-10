@@ -9,4 +9,11 @@ describe("Header test", () => {
 
     expect(getByText(titleText)).toBeInTheDocument();
   });
+
+  test("Should have 3 lisitem", () => {
+    const countOfListItems = 3;
+    const { getAllByRole } = render(<Header />);
+
+    expect(getAllByRole("listitem")).toHaveLength(countOfListItems);
+  });
 });

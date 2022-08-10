@@ -5,9 +5,17 @@ const Header = () => {
     <header className={styles.header__root}>
       <a href="#">jDev</a>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
       </nav>
     </header>
   );
