@@ -2,10 +2,16 @@ import Footer from "./footer";
 import { render } from "@testing-library/react";
 
 describe("Footer test", () => {
-  test("Footer should have footer Text", () => {
-    const label = "Footer";
-
+  test("Footer should have jDev Text", () => {
     const { getByText } = render(<Footer />);
-    expect(getByText(label)).toBeInTheDocument();
+
+    expect(getByText(/jDev/i)).toHaveTextContent("Copyright");
+  });
+
+  test("Footer should have current year", () => {
+    const currentYear = new Date().getFullYear().toString();
+    const { getByText } = render(<Footer />);
+
+    expect(getByText(/2022/i)).toHaveTextContent(currentYear);
   });
 });
